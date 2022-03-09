@@ -1,0 +1,320 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgb(233, 150, 175);
+}
+
+#piano{
+    width: 1600px;
+    margin: 200px auto;
+    background-color: rgb(240, 240, 232);
+    border-radius: 5px;
+    border-top: 5px solid rgb(241, 241, 241);
+    display: flex;
+    filter: drop-shadow(30px 40px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Partie gauche, haut parleur et titre  */
+
+#gauche{
+    width: 360px;
+    position: relative;
+}
+
+
+
+#cercle{
+    position: absolute;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    top: 25px;
+    left: 10px;
+    background: repeating-linear-gradient(90deg, black 0% 31%,rgba(185, 161, 131, 0.6) 31% 35%, black 35% 65%, rgba(185, 161, 131, 0.6) 65% 69%, black 69% 100%);
+    z-index: 1;
+    border-radius: 100%;
+}
+
+#creux{
+    position: absolute;
+    margin: 20px;
+    width: 320px;
+    height: 350px;
+    background: repeating-linear-gradient(rgb(216, 193, 166) 3px 9px, rgba(187, 167, 144, 0.8) 9px 15px);
+    z-index: 2;
+    box-shadow: inset 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+#grille{
+    position: relative;
+    margin: 20px;
+    width: 320px;
+    height: 350px;
+    background: repeating-linear-gradient(rgb(240, 240, 232) 0px 6px, rgba(240, 240, 232, 0) 6px 12px);
+    z-index: 10;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'League Spartan', sans-serif;
+    color: #724556;
+    padding: 20px 0px 40px 0px ;
+}
+
+span{
+    text-shadow: 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556, 0 0 2px #724556;
+    color: rgb(240, 240, 232);
+}
+
+/* Partie droite avec les différents boutons et titres  */
+
+#droite{
+    width: 1220px;
+    position: relative;
+    padding-top: 15px;
+}
+
+#boutons{
+    border-top: 3px black solid;
+    border-bottom: 3px solid black;
+}
+
+#titres{
+    display: flex;
+}
+
+h2{
+    border: 2px black solid;
+    border-radius: 3px;
+    padding: 1px 10px;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+h2:first-of-type{
+    margin-left: 100px;
+    padding: 1px 20px;
+}
+
+h2:nth-of-type(2){
+    margin-left: 35px;
+    padding: 1px 30px;
+}
+
+h2:nth-of-type(3){
+    margin-left: 110px;
+    padding: 1px 30px;
+}
+
+h2:nth-of-type(4){
+    margin-left: 100px;
+    padding: 1px 40px;
+}
+
+h2:last-of-type{
+    margin-left: 300px;
+}
+
+#inset{
+    margin: 30px 0px ;
+    padding: 5px 2px;
+    display: flex;
+    border: inset 2px rgba(163, 146, 127, 0.2);
+    border-radius: 2px;
+}
+
+.codebarre{
+    background: repeating-linear-gradient(90deg, rgb(197, 194, 190) 1px 2px, rgb(240, 240, 232) 2px 4px);
+    width: 20px;
+    /* height: 40px; */
+}
+
+.codebarre:first-of-type{
+    width: 90px;
+}
+
+.codebarre:nth-of-type(5){
+    width: 90px;
+}
+
+.codebarre:nth-of-type(16){
+    width: 200px;
+}
+
+.codebarre:nth-of-type(19){
+    width: 40px;
+}
+
+.volume{
+    border: inset rgba(187, 167, 144, 0.2) 1px;
+    border-radius: 3px;
+    margin: 0px 10px;
+    box-shadow: inset 1px 2px rgba(68, 64, 59, 0.4);
+    position: relative;
+}
+
+#lignemode{
+    width: 60px;
+}
+
+#lignetone{
+    width: 90px;
+}
+
+.ligne{
+    height: 10px;
+    width: 90px;
+    background: linear-gradient(rgb(27, 27, 27) 0% 45%,black 45% 55%,rgb(56, 56, 56) 55% 100%);
+    display: flex;
+    margin: 8px 5px;
+    justify-self: center;
+    border-radius: 1px;
+}
+
+.pad{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 2px;
+    border: 3px solid rgba(126, 126, 126, 0.3);
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.6));
+    transition: 1.5s;
+}
+
+#mode{
+    height: 12px;
+    border-radius: 10px;
+    border:rgb(36, 36, 36) 3px solid ;
+    top: 7px;
+}
+
+.tempo{
+    width: 12px;
+    background-color: rgb(207, 75, 52);
+    margin: 0 11px;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.6));
+    border: outset 1.5px rgb(168, 37, 14);
+}
+
+.bleu{
+    background-color: rgb(112, 110, 250);
+    border: rgb(83, 81, 207) outset 1.5px;
+}
+
+.jaune{
+    background-color: rgb(231, 172, 7);
+    border:rgb(187, 138, 2) outset 1.5px ;
+}
+
+.vert{
+    background-color: rgb(45, 204, 196);
+    border: rgb(25, 172, 164) 1.5px outset ;
+}
+
+.onekey{
+    width: 50px;
+    background: repeating-linear-gradient(rgb(113, 140, 230) 0% 2%,rgb(143, 143, 143) 2% 4%);
+    margin: 0 10px;
+    border-radius: 4px ;
+    border-left: rgb(92, 114, 185) 2px solid;
+    box-shadow: -2px -0px black;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.8));
+}
+
+/* Partie clavier  */
+
+#clavier{
+    display: flex;
+    margin-top: 40px;
+    border-top: 3px black solid;
+    height: 300px;
+    border-left: rgba(187, 167, 144, 0.8) 8px solid ;
+    border-right: rgba(187, 167, 144, 0.8) 8px solid ;
+}
+
+.gamme{
+    position: relative;
+    display: flex;
+}
+
+.tblanche{
+    width: 71px;
+    border: 2px black solid;
+    height: 270px;
+    border-radius: 5px;
+    background: linear-gradient(rgb(224, 224, 211), rgb(240, 240, 232)) ;
+    filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.8));
+}
+
+.tnoire{
+    border: 3px black outset;
+    border-radius: 5px;
+    height: 150px;
+    width: 36px;
+    background: linear-gradient(rgb(104, 104, 104),rgb(34, 34, 34));
+    position: absolute;
+    z-index: 100;
+}
+
+.gamme>.tnoire:nth-of-type(2){
+    left: 53px;
+}
+
+.gamme>.tnoire:nth-of-type(4){
+    left: 124px;
+}
+
+.gamme>.tnoire:nth-of-type(6){
+    left: 195px;
+}
+
+/* Partie active  */
+
+.tblanche:active{
+    background: linear-gradient(rgb(240, 240, 232), rgb(224, 224, 211)) ;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.8));
+}
+
+.tnoire:active{
+    background: linear-gradient(rgb(70, 70, 70),rgb(0, 0, 0));
+    border: 3px black solid;
+}
+
+.tempo:active{
+    filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.6));
+    border: inset 1.5px rgb(168, 37, 14);
+
+}
+
+.bleu:active{
+    border: rgb(83, 81, 207) inset 1.5px;
+}
+
+.jaune:active{
+    border:rgb(187, 138, 2) inset 1.5px ;
+}
+
+.vert:active{
+    border: rgb(25, 172, 164) 1.5px inset ;
+}
+
+.onekey:active{
+    border-left: rgb(92, 114, 185) 2px solid;
+    box-shadow: -0.5px -0px black;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.8));
+}
+
+.pad:hover{
+    margin-left: 30px;
+    transition: 1.5s;
+}
